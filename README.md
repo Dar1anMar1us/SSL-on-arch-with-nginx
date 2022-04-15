@@ -69,3 +69,17 @@ server {
 ### Install certificate
 
 <pre>sudo certbot --nginx -d domain -d www.domain.whatever</pre>
+
+### Renew Certificate
+
+<pre>wget https://dl.eff.org/certbot-auto && chmod a+x certbot-auto</pre>
+<pre>sudo mv certbot-auto /etc/letsencrypt/</pre>
+<pre>cd /etc/letsencrypt/ && ./certbot-auto renew</pre>
+
+### U can use cron to auto renew
+
+<pre>sudo crontab -e</pre>
+
+### Add this to the cron file (this will execute every month)
+
+<pre>0 0 1 * * cd /etc/letsencrypt/ && ./certbot-auto renew && sudo systemctl restart nginx</pre>
