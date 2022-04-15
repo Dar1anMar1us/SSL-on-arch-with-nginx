@@ -26,6 +26,10 @@
 <pre>pm2 restart all</pre>
 <pre>pm2 stop all</pre>
 
+### Update arch
+
+<pre>sudo pacman -Syu</pre>
+
 ### Install nginx
 
 <pre>sudo pacman -S nginx</pre>
