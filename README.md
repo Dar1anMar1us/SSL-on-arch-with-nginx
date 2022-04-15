@@ -8,7 +8,7 @@
  
 ### Change package.json to start with pm2
 
-<pre>"prod": "pm2 start index.js"</pre>
+<pre>"prod": "pm2 start index.js --watch"</pre>
 
 ### Start app in background
 
@@ -23,6 +23,8 @@
 <pre>pm2 logs</pre>
 <pre>pm2 flush</pre>
 <pre>pm2 startup arch</pre>
+<pre>pm2 restart all</pre>
+<pre>pm2 stop all</pre>
 
 ### Install nginx
 
